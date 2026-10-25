@@ -1,0 +1,60 @@
+Translate a real problem into a graph.
+Most of the modeling judgement happens before the algorithim starts
+Node:
+Example - road intersections
+Edge:
+A road that vehicles are allowed to use
+Weight:
+
+Forbidden:
+Besides of needing to identify the weight, you need to identify what is forbidden
+Two ways to store a graph:
+Adjacency list - A:B,C B and C are connected to A
+Adjacency matrix - if the corresponding node is 1 it means the two connected elements are connected on a graph(suitable if there is a lot of edges and nodes because there is a lot of ones which would help with memory management)
+
+Walks,paths,cycles, and connectivity
+Walk:
+Means a sequence of adjacent verticies. Verticies or edges may repear
+Path:
+A walk with no repeated verticies
+Cycles:
+A closed path that returns to its starting vertex
+Connected:
+Every node has a connecting path
+
+Degree and centrality
+Degree:
+numer of incident edges
+Directed graph:
+High when node has many directed neibours(In-degree = incoming edges out-degree =outgoing edges)
+Degree centrality:
+High when a node has many directed neighbors. Useful for local reach
+Betweenness:
+High when many shortest paths pass through the nodes(useful for bottlenecks)
+Closeness:
+High when a node has short paths to the rest of the network.(useful for access.)
+Centrality is not one universal score. Choose the measure that matches the real question.)
+To evaluate
+
+Weighted paths: "shortest" mans smallest total weight(a path with more edges can still be faster or cheaper)
+Weight examples: distance, travel time,cost,risk
+
+Dijkstra's shortest path algorithim:
+Initialize: Set distance(source)=0 every other distance = infinity
+Choose a node: Among unsettled nodes, select the one with smallest tenative distance
+Relax its edges: Try distance(u) +w(u,v); keep it if it imrpoves distance(v)
+Settle the node: Its shortest distance is now final
+Repeat: Stop when the target issettled or all reachabe nodes is settled
+
+Kruskal's algorithim on the same network:
+sort edges from lightest to heaviest: add an edge only if it does not create a cycle
+
+Flow conservation:
+
+Other graph questions common in modeling(these are different optimization or analysis problems even when they use the same graph):
+Maximum flow: How much can pass through a capacitated network(Traffic,water,data,supplies)
+Graph coloring: color different vertexs with different colors, seperates conflicts(different color may represent a different group)
+Matching:
+How should two sets e paired? (Example: students-projects, workers-tasks, donors-recipients)
+Community and centrality:
+Which groups or nodes shape the network?(Examples: social networks, transport hubs, ecological corridors)

@@ -1,0 +1,11 @@
+Strong paper makes a checkable arguement
+The reader should be able to trace the recommendation back to the question, model and evidence.
+Question(What must be decided)
+Model(Why these relationships)
+Evidence(What checks support it)
+Reccomendation(when should it be used)
+
+Turn the prompt into deliverables
+List every requested output before choosing a method. A good model can still miss the tank
+
+
